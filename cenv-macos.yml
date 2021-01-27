@@ -58,4 +58,3 @@ dependencies:
   - zstd=1.4.5=h0384e3a_1
   - pip:
     - pyserial==3.4
-prefix: /Users/jusic/anaconda3/envs/ant
