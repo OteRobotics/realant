@@ -2,9 +2,9 @@ import zmq
 
 ctx = zmq.Context()
 frontend = ctx.socket(zmq.XSUB)
-frontend.bind("tcp://*:3002")
+frontend.bind("tcp://127.0.0.1:3002")
 backend = ctx.socket(zmq.XPUB)
-backend.bind("tcp://*:3001")
+backend.bind("tcp://127.0.0.1:3001")
 #backend.setsockopt(zmq.XPUB_VERBOSE, True)
 
 try:
