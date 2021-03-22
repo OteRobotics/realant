@@ -1,3 +1,7 @@
+# Licensed under MIT licence, see LICENSE for details.
+# Copyright Ote Robotics Ltd. 2020
+# Copyright Aalto University 2021
+
 import cv2
 import zmq
 import datetime
