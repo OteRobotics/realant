@@ -1,3 +1,6 @@
+# Licensed under MIT licence, see LICENSE for details.
+# Copyright Ote Robotics Ltd. 2020
+
 import pandas as pd
 import sys
 import matplotlib.pyplot as plt
