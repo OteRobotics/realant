@@ -7,7 +7,7 @@ with a web camera based tracking system. It is aimed to be a low-cost starting
 point for anybody interested in bringing reinforcement learning to practical
 real robots.
 
-![RealAnt-v1](/../master/stl/RealAnt-v1.jpeg?raw=true)
+![RealAnt-v1.1/v1.2](/../master/stl/RealAnt-v1.1.jpeg?raw=true)
 
 This repository provides 3D models and build instructions
 for making your own RealAnt, firmware code for the robot microcontroller, and
@@ -38,9 +38,13 @@ If you want to get the robot ready assembled, you can buy them from
 
 
 To build your own, you need to obtain 8 Robotis Dynamixel AX-12A's and
-one Robotis OpenCM9.04A board + accessory set. For building,
-you need additionally some two-wire cable for power, a soldering iron,
-side cutters, a Phillips screwdriver and thread-locking fluid.
+one Robotis OpenCM9.04A board + accessory set or Ote Robotics RealAnt
+Main Board v1.2 with Arduino Nano 33 IoT (see `board_1.2` folder for
+PCB gerbers, BOM, layout and schematics PDFs).  
+
+For building, you need additionally some two-wire cable for power, 
+a soldering iron, side cutters, a Phillips screwdriver and 
+thread-locking fluid (such as Loctite blue).
 
 The 3D model files are under `stl` folder. You need to print two
 body torso plates and four leg assemblies.
@@ -48,8 +52,16 @@ body torso plates and four leg assemblies.
 For PrusaSlicer, use 20% gyroid infill, 0.2mm layer height, no top 
 and bottom layers.
 
-Install Arduino and setup Robotis OpenCM9.04 board support,
+
+## RealAnt Main Board Firmware
+
+For the OpenCM9.04A board, install Arduino and setup Robotis OpenCM9.04 board support,
 and then upload the OpenCM9.04 firmware from `ant11_cmd_dxl` folder.
+
+For the Ote Robotics RealAnt Main Board v1.2 with Arduino Nano 33 IoT, 
+install Arduino and use firmware from `ant14_cmd_dxl_nano33iot` folder.
+You also need to install the forked DynamixelSDK from this folder into
+Arduino libraries.
 
 
 ## Pose Estimation Calibration and Testing
@@ -158,6 +170,15 @@ The beginning of the first string is the "topic" in ZMQ terms
    (and recorded setpoints) from `ant_server.py` and also for 
    `showaruco_board.py` measurement packets.
 
+
+# RealAnt Revision History
+
+
+| Version | Description |
+| --- | --- |
+| RealAnt v1 | First version with FP04-2 hip joints and OpenCM9.04 microcontroller board |
+| RealAnt v1.1 | Hip joints replaced with 3D printed ones, OpenCM9.04 microcontroller board |
+| RealAnt v1.2 | Microcontroller board changed to Arduino Nano 33 IoT based one |
 
 
 # Copyright and License
